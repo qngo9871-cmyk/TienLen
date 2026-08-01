@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17C7E71951733CF18BEAA8A3 /* InstantWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B369003EA19E9E2FBCBE7346 /* InstantWin.swift */; };
+		2E4022DA8CFC1E88C109085C /* AIPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C944D242D88FDF44A29DE7 /* AIPlayer.swift */; };
+		37E978EB10747DB36CA22B01 /* Combo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C961A46132D75635F288B /* Combo.swift */; };
+		4E1A6479FB538EF135B1AB02 /* GameModel+Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41220A223DAE441B7D56519 /* GameModel+Capture.swift */; };
+		65F0E1A1C708B313A05BF837 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3032750F03C037EF241113F /* Card.swift */; };
+		6B4C479AE3C5C8031667DEB5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692DC3DE1068E9130A692EB /* Localization.swift */; };
+		773759F5D2F9C10B74D6400A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EE62763174C91F034741E /* CardView.swift */; };
+		8191E1EE17E6A1ACBBE3CE9C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F88911DB8A4CF55AAD24F /* GameView.swift */; };
+		866B26AD32CF00463DC82B8D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F74A180E1FD68D0B34927 /* GameModel.swift */; };
+		8D1E659F873084A66C67535D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E8E91520697A567297957E /* OnboardingView.swift */; };
+		92BAE5129ABD28AC99D5722D /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9857D445DDD8DA34383FEFBA /* PurchaseManager.swift */; };
+		A6DA877FF537A9A9C8C2E19F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0DD1209617A178B64AE9B943 /* Localizable.strings */; };
+		BE604E60383350828283849B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBA96736F64B7A227FE8F9E /* ContentView.swift */; };
+		C22C68F6CB6537AE63ADF7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E3A2D5E2176B1BB50F66F30 /* Assets.xcassets */; };
+		C3E48968EDC467389D10D97D /* UpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C1D41FED12FB2F78B124E1 /* UpgradeView.swift */; };
+		D99D4674CB2FF6300B2A11B8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F901905398AB6745E02D8A05 /* HomeView.swift */; };
+		D9F948A54E23EF5D85B2D1D6 /* TienLenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B3EF6A2C68F590E9899349 /* TienLenApp.swift */; };
+		DD013A0D7893807F005E5B9E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669CE03DBF9F13FE707CC8DF /* Player.swift */; };
+		F7A1C0C1060D36210F155463 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074C20A537D029E08D9DDC86 /* RulesView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02C1D41FED12FB2F78B124E1 /* UpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeView.swift; sourceTree = "<group>"; };
+		074C20A537D029E08D9DDC86 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
+		27B3EF6A2C68F590E9899349 /* TienLenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TienLenApp.swift; sourceTree = "<group>"; };
+		46FC93D8BB8F71824D4A3F5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		599EE62763174C91F034741E /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		669CE03DBF9F13FE707CC8DF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		7E3A2D5E2176B1BB50F66F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81BCB60A078AAE532A38F066 /* TienLen.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TienLen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5C961A46132D75635F288B /* Combo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combo.swift; sourceTree = "<group>"; };
+		9857D445DDD8DA34383FEFBA /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		9DBA96736F64B7A227FE8F9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A41220A223DAE441B7D56519 /* GameModel+Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameModel+Capture.swift"; sourceTree = "<group>"; };
+		B369003EA19E9E2FBCBE7346 /* InstantWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantWin.swift; sourceTree = "<group>"; };
+		B69F88911DB8A4CF55AAD24F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B6E8E91520697A567297957E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C3032750F03C037EF241113F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C61F74A180E1FD68D0B34927 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		C8C944D242D88FDF44A29DE7 /* AIPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIPlayer.swift; sourceTree = "<group>"; };
+		D60C16C044F07FF257E16D43 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E692DC3DE1068E9130A692EB /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		F901905398AB6745E02D8A05 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A06163B8837638BBF83049B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				599EE62763174C91F034741E /* CardView.swift */,
+				B69F88911DB8A4CF55AAD24F /* GameView.swift */,
+				F901905398AB6745E02D8A05 /* HomeView.swift */,
+				B6E8E91520697A567297957E /* OnboardingView.swift */,
+				074C20A537D029E08D9DDC86 /* RulesView.swift */,
+				02C1D41FED12FB2F78B124E1 /* UpgradeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		29CAE9693CC57CD7CD9EDC08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81BCB60A078AAE532A38F066 /* TienLen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F84F12CF089FA2D4A4F2D33 = {
+			isa = PBXGroup;
+			children = (
+				FF5F75373B01A59AFB1ADB53 /* TienLen */,
+				29CAE9693CC57CD7CD9EDC08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C66F611093A24A0042E8759D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C8C944D242D88FDF44A29DE7 /* AIPlayer.swift */,
+				C3032750F03C037EF241113F /* Card.swift */,
+				8A5C961A46132D75635F288B /* Combo.swift */,
+				C61F74A180E1FD68D0B34927 /* GameModel.swift */,
+				A41220A223DAE441B7D56519 /* GameModel+Capture.swift */,
+				B369003EA19E9E2FBCBE7346 /* InstantWin.swift */,
+				E692DC3DE1068E9130A692EB /* Localization.swift */,
+				669CE03DBF9F13FE707CC8DF /* Player.swift */,
+				9857D445DDD8DA34383FEFBA /* PurchaseManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FF5F75373B01A59AFB1ADB53 /* TienLen */ = {
+			isa = PBXGroup;
+			children = (
+				7E3A2D5E2176B1BB50F66F30 /* Assets.xcassets */,
+				9DBA96736F64B7A227FE8F9E /* ContentView.swift */,
+				27B3EF6A2C68F590E9899349 /* TienLenApp.swift */,
+				C66F611093A24A0042E8759D /* Core */,
+				0DD1209617A178B64AE9B943 /* Localizable.strings */,
+				0A06163B8837638BBF83049B /* Views */,
+			);
+			path = TienLen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0C31054389681E0E7B4FE10 /* TienLen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EE291B02E11FF9C61A64C6F /* Build configuration list for PBXNativeTarget "TienLen" */;
+			buildPhases = (
+				CDDD48ED8CF712E71DC56E5C /* Sources */,
+				D25FE38D6ACC3C75342FAE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TienLen;
+			packageProductDependencies = (
+			);
+			productName = TienLen;
+			productReference = 81BCB60A078AAE532A38F066 /* TienLen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA0026D328C3B39BC95F359 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B0C31054389681E0E7B4FE10 = {
+						DevelopmentTeam = SM99L22Q84;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 31771FD9E56AC8890CDA28B0 /* Build configuration list for PBXProject "TienLen" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				vi,
+			);
+			mainGroup = 3F84F12CF089FA2D4A4F2D33;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 29CAE9693CC57CD7CD9EDC08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0C31054389681E0E7B4FE10 /* TienLen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D25FE38D6ACC3C75342FAE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C22C68F6CB6537AE63ADF7C5 /* Assets.xcassets in Resources */,
+				A6DA877FF537A9A9C8C2E19F /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDDD48ED8CF712E71DC56E5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E4022DA8CFC1E88C109085C /* AIPlayer.swift in Sources */,
+				65F0E1A1C708B313A05BF837 /* Card.swift in Sources */,
+				773759F5D2F9C10B74D6400A /* CardView.swift in Sources */,
+				37E978EB10747DB36CA22B01 /* Combo.swift in Sources */,
+				BE604E60383350828283849B /* ContentView.swift in Sources */,
+				4E1A6479FB538EF135B1AB02 /* GameModel+Capture.swift in Sources */,
+				866B26AD32CF00463DC82B8D /* GameModel.swift in Sources */,
+				8191E1EE17E6A1ACBBE3CE9C /* GameView.swift in Sources */,
+				D99D4674CB2FF6300B2A11B8 /* HomeView.swift in Sources */,
+				17C7E71951733CF18BEAA8A3 /* InstantWin.swift in Sources */,
+				6B4C479AE3C5C8031667DEB5 /* Localization.swift in Sources */,
+				8D1E659F873084A66C67535D /* OnboardingView.swift in Sources */,
+				DD013A0D7893807F005E5B9E /* Player.swift in Sources */,
+				92BAE5129ABD28AC99D5722D /* PurchaseManager.swift in Sources */,
+				F7A1C0C1060D36210F155463 /* RulesView.swift in Sources */,
+				D9F948A54E23EF5D85B2D1D6 /* TienLenApp.swift in Sources */,
+				C3E48968EDC467389D10D97D /* UpgradeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0DD1209617A178B64AE9B943 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46FC93D8BB8F71824D4A3F5B /* en */,
+				D60C16C044F07FF257E16D43 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EA6CA8292660C33AEC0570F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SM99L22Q84;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		38BEBF78ACF870DC5CA13582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SM99L22Q84;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4D8882288BF25179F1614606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tiến Lên";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quyenngo.tienlen;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		71AF9A30E8390AB58D0D8BE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tiến Lên";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quyenngo.tienlen;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EE291B02E11FF9C61A64C6F /* Build configuration list for PBXNativeTarget "TienLen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71AF9A30E8390AB58D0D8BE3 /* Debug */,
+				4D8882288BF25179F1614606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		31771FD9E56AC8890CDA28B0 /* Build configuration list for PBXProject "TienLen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EA6CA8292660C33AEC0570F /* Debug */,
+				38BEBF78ACF870DC5CA13582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAA0026D328C3B39BC95F359 /* Project object */;
+}

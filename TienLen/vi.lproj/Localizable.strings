@@ -1,0 +1,71 @@
+"home.title" = "Tiến Lên";
+"home.subtitle" = "Bài Việt Nam — Chơi Một Mình Với AI";
+"home.difficulty" = "Độ Khó AI";
+"home.play" = "Chơi";
+"home.rules" = "Luật Đầy Đủ";
+"home.howtoplay" = "Hướng Dẫn";
+"home.upgrade" = "Mở khóa AI Khó & hơn thế nữa →";
+"home.player.you" = "Bạn";
+"home.player.left" = "Trái";
+"home.player.across" = "Đối Diện";
+"home.player.right" = "Phải";
+
+"difficulty.easy" = "Dễ";
+"difficulty.normal" = "Vừa";
+"difficulty.hard" = "Khó";
+
+"game.round" = "Ván %d";
+"game.lastPlayed" = "%@ vừa đánh";
+"game.freeLead" = "Ra bài tự do — đánh bất kỳ bộ nào";
+"game.yourTurn" = "Đến lượt bạn";
+"game.pass" = "Bỏ Lượt";
+"game.play" = "Đánh Bài";
+"game.nextRound" = "Ván Tiếp Theo";
+"game.matchOver" = "Kết Thúc Trận";
+"game.done" = "Xong";
+
+"log.leads" = "%@ ra bài trước";
+"log.played" = "%@ đánh %@";
+"log.passed" = "%@ bỏ lượt";
+"log.roundWinner" = "%@ thắng ván này!";
+"log.instantWin" = "%@ thắng ngay với %@!";
+"log.congPenalty" = "%@ chưa đánh lá nào — bị cóng, phạt gấp ba!";
+
+"win.dragonStraight" = "Sảnh Rồng";
+"win.fourTwos" = "Tứ Quý Heo";
+
+"upgrade.title" = "Tiến Lên Pro";
+"upgrade.subtitle" = "Mở khóa trải nghiệm đầy đủ.";
+"upgrade.feature.hardAI" = "AI Khó — đối thủ tính bài thực thụ";
+"upgrade.feature.cardBacks" = "Mẫu mặt sau lá bài độc quyền";
+"upgrade.feature.unlimited" = "Chơi không giới hạn, không quảng cáo";
+"upgrade.owned" = "Bạn đã sở hữu Tiến Lên Pro ✓";
+"upgrade.buy" = "Mở Khóa — %@";
+"upgrade.buyFallback" = "Mở Khóa Tiến Lên Pro";
+"upgrade.restore" = "Khôi Phục Giao Dịch";
+"upgrade.close" = "Để Sau";
+
+"rules.title" = "Luật Đầy Đủ";
+"rules.done" = "Xong";
+
+"onboarding.goal.title" = "Đánh Hết Bài";
+"onboarding.goal.body" = "Bạn và 3 đối thủ AI mỗi người 13 lá — trọn bộ bài. Ai đánh hết bài trước sẽ thắng ván.";
+"onboarding.combos.title" = "Chặt Bài Trước";
+"onboarding.combos.body" = "Đánh một lá, đôi, bộ ba, sảnh, hoặc đôi thông lớn hơn bài trước — hoặc bỏ lượt. Các bộ chặt (tứ quý, đôi thông) chặt được tất cả, kể cả một lá 2 lẻ.";
+"onboarding.special.title" = "Coi Chừng Bẫy";
+"onboarding.special.body" = "Bài mở đầu hoàn hảo có thể thắng ngay (\"Tới Trắng\"). Và nếu bạn chưa đánh được lá nào khi ván kết thúc, bạn sẽ bị \"cóng\" — phạt gấp ba. Chạm \"Luật Đầy Đủ\" bất cứ lúc nào để xem chi tiết.";
+"onboarding.next" = "Tiếp";
+"onboarding.begin" = "Chơi Thôi";
+
+"rules.deal.title" = "Chia Bài";
+"rules.deal.body" = "4 người chơi, mỗi người 13 lá — trọn bộ bài. Thứ tự từ 3 (nhỏ nhất) đến Át, rồi đến 2 (\"heo\") là lá mạnh nhất. Ai có 3♠ được đánh trước.";
+"rules.combos.title" = "Các Bộ Bài";
+"rules.combos.body" = "Đánh một lá, đôi, bộ ba, sảnh (từ 3 lá, không phân biệt chất), hoặc đôi thông (từ 3 đôi liên tiếp) lớn hơn bài trước — hoặc bỏ lượt. Chất chỉ dùng để so sánh lá đơn cùng hạng, không ảnh hưởng đến việc sảnh có hợp lệ hay không.";
+"rules.bombs.title" = "Chặt Bài & Chặt Heo";
+"rules.bombs.body" = "Tứ quý và đôi thông (từ 3 đôi trở lên) là các bộ chặt — chặt được mọi bộ bài thường, và có thể \"chặt heo\" (chặt lá 2 lẻ). Trong các bộ chặt: đôi thông 3 đôi yếu nhất, rồi đến tứ quý, rồi mỗi đôi thông dài hơn chặt được mọi đôi thông ngắn hơn và mọi tứ quý.";
+"rules.instantwin.title" = "Tới Trắng";
+"rules.instantwin.body" = "Nếu 13 lá bài đầu tiên của bạn tạo thành Sảnh Rồng (đủ các hạng từ 3 đến Át) hoặc Tứ Quý Heo (đủ bốn lá 2), bạn thắng ngay ván đó — trước khi ai đánh một lá nào.";
+"rules.cong.title" = "Cóng";
+"rules.cong.body" = "Nếu ván kết thúc mà bạn chưa đánh được lá nào, bạn sẽ bị \"cóng\": tiền phạt của bạn bị nhân ba, cộng thêm với các khoản phạt vì còn giữ lá 2 (\"thối heo\") hoặc tứ quý chưa đánh.";
+"rules.scoring.title" = "Tính Điểm";
+"rules.scoring.body" = "Người thắng ván tính điểm từ số bài còn lại của những người khác. Lá 2 chưa đánh (\"thối heo\") và tứ quý chưa đánh sẽ bị phạt thêm — và cóng sẽ nhân ba tổng số điểm phạt.";

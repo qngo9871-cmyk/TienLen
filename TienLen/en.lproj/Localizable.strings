@@ -1,0 +1,71 @@
+"home.title" = "Tiến Lên";
+"home.subtitle" = "Vietnamese Card Game — Solo vs. AI";
+"home.difficulty" = "AI Difficulty";
+"home.play" = "Play";
+"home.rules" = "Full Rules";
+"home.howtoplay" = "How to Play";
+"home.upgrade" = "Unlock Hard AI & more →";
+"home.player.you" = "You";
+"home.player.left" = "Left";
+"home.player.across" = "Across";
+"home.player.right" = "Right";
+
+"difficulty.easy" = "Easy";
+"difficulty.normal" = "Normal";
+"difficulty.hard" = "Hard";
+
+"game.round" = "Round %d";
+"game.lastPlayed" = "%@ played";
+"game.freeLead" = "Free lead — play any combo";
+"game.yourTurn" = "Your turn";
+"game.pass" = "Pass";
+"game.play" = "Play";
+"game.nextRound" = "Next Round";
+"game.matchOver" = "Match Over";
+"game.done" = "Done";
+
+"log.leads" = "%@ to lead";
+"log.played" = "%@ played %@";
+"log.passed" = "%@ passed";
+"log.roundWinner" = "%@ — round won!";
+"log.instantWin" = "%@ — instant win with %@!";
+"log.congPenalty" = "%@ played zero cards — cóng, triple penalty!";
+
+"win.dragonStraight" = "Dragon Straight (Sảnh Rồng)";
+"win.fourTwos" = "Four 2s (Tứ Quý Heo)";
+
+"upgrade.title" = "Tiến Lên Pro";
+"upgrade.subtitle" = "Unlock the full experience.";
+"upgrade.feature.hardAI" = "Hard AI — real card-counting opponents";
+"upgrade.feature.cardBacks" = "Exclusive card back designs";
+"upgrade.feature.unlimited" = "Unlimited matches, no ads, ever";
+"upgrade.owned" = "You own Tiến Lên Pro ✓";
+"upgrade.buy" = "Unlock — %@";
+"upgrade.buyFallback" = "Unlock Tiến Lên Pro";
+"upgrade.restore" = "Restore Purchases";
+"upgrade.close" = "Not Now";
+
+"rules.title" = "Full Rules";
+"rules.done" = "Done";
+
+"onboarding.goal.title" = "Shed Every Card";
+"onboarding.goal.body" = "You and 3 AI opponents each get 13 cards — the whole deck. Be the first to play all of yours to win the round.";
+"onboarding.combos.title" = "Beat the Last Play";
+"onboarding.combos.body" = "Play a single, pair, triple, straight (sảnh), or pair-straight (đôi thông) higher than the last play — or pass. Bombs beat everything, including a lone 2.";
+"onboarding.special.title" = "Watch for the Traps";
+"onboarding.special.body" = "A perfect opening hand can win instantly (\"Tới Trắng\"). And if you never get to play a single card before the round ends, you're \"cóng\" — triple penalty. Tap \"Full Rules\" anytime for every detail.";
+"onboarding.next" = "Next";
+"onboarding.begin" = "Let's Play";
+
+"rules.deal.title" = "The Deal";
+"rules.deal.body" = "4 players, 13 cards each — the entire deck. Ranks run 3 (lowest) up to Ace, then 2 (\"heo\") is the strongest card. Whoever holds 3♠ leads the first trick.";
+"rules.combos.title" = "Combos";
+"rules.combos.body" = "Play a single, pair, triple, straight (sảnh, 3+ cards, any suits), or pair-straight (đôi thông, 3+ consecutive pairs) higher than the last play — or pass. Suit only breaks ties on singles; it never decides whether a straight is legal.";
+"rules.bombs.title" = "Bombs & Chặt Heo";
+"rules.bombs.body" = "Four of a kind (tứ quý) and pair-straights of 3+ pairs are bombs — they beat any non-bomb combo, and can \"chặt heo\" (cut the pig) by beating a lone 2. Between bombs: a 3-pair straight is weakest, then tứ quý, then each longer pair-straight beats every shorter one and every tứ quý.";
+"rules.instantwin.title" = "Instant Win — Tới Trắng";
+"rules.instantwin.body" = "If your opening 13 cards form a Dragon Straight (every rank 3 through Ace) or all four 2s, you win the round instantly — before a single card is played.";
+"rules.cong.title" = "Cóng — Skunked";
+"rules.cong.body" = "If the round ends before you've played a single card, you're \"cóng\": your penalty for the round is tripled, on top of any penalty for unplayed 2s or an unplayed four-of-a-kind.";
+"rules.scoring.title" = "Scoring";
+"rules.scoring.body" = "The round winner scores points from every other player's remaining cards. Unplayed 2s (\"thối heo\") and an unplayed four-of-a-kind cost extra — and cóng triples the total.";
