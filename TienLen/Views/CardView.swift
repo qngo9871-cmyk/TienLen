@@ -5,6 +5,7 @@ struct CardView: View {
     var selected: Bool = false
     var faceDown: Bool = false
     var width: CGFloat = 46
+    var backStyle: CardBackStyle = .classic
 
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
@@ -20,7 +21,7 @@ struct CardView: View {
                     }
                     .foregroundStyle(card.suit.isRed ? .red : .black)
                 } else {
-                    Image(systemName: "suit.club.fill")
+                    Image(systemName: backStyle.icon)
                         .foregroundStyle(.white.opacity(0.35))
                         .font(.system(size: width * 0.4))
                 }
@@ -35,8 +36,7 @@ struct CardView: View {
     }
 
     private var backGradient: LinearGradient {
-        LinearGradient(colors: [Color(red: 0.6, green: 0.05, blue: 0.05), Color(red: 0.3, green: 0.02, blue: 0.02)],
-                        startPoint: .topLeading, endPoint: .bottomTrailing)
+        LinearGradient(colors: backStyle.gradientColors, startPoint: .topLeading, endPoint: .bottomTrailing)
     }
 }
 

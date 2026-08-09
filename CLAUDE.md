@@ -8,7 +8,45 @@ background, but **do not assume its ruleset applies here**. The two games share 
 structure (4 players, combo-beating shedding, tới trắng instant wins, StoreKit Pro unlock,
 true bilingual UI) but the actual game logic genuinely differs in several places — see below.
 
-**Status: 🟢 SUBMITTED, WAITING_FOR_REVIEW (2026-08-01).** App id `6796833065`, version `1.0.0` (id `3e15840d-4255-48f1-83fc-420fe8cf4ddf`), build `d8799eca-0a28-4ca1-be15-ebcd724bf213` attached, reviewSubmission `f59cb5d1-f8a5-4b84-b086-99e25942affd`. Release type: automatic (`AFTER_APPROVAL`) — no manual release step needed after Apple approves.
+**Status: 🟡 READY FOR RESUBMISSION AFTER 2026-08-18 (pending Apple's Guideline 5.6 hold).**
+The whole developer account (19 apps, this one included) got hit with a Guideline 5.6
+"Developer Code of Conduct — Review Suspended" account-level flag, almost certainly
+triggered by submitting ~19 similar template-style apps within an 8-day window
+(2026-08-01–2026-08-08). Resubmission is hard-blocked until 2026-08-18 — do not attempt
+any App Store Connect action before then. Prior ASC state (now stale): app id `6796833065`,
+version `1.0.0` (id `3e15840d-4255-48f1-83fc-420fe8cf4ddf`), build
+`d8799eca-0a28-4ca1-be15-ebcd724bf213` attached, reviewSubmission
+`f59cb5d1-f8a5-4b84-b086-99e25942affd`. Release type: automatic (`AFTER_APPROVAL`).
+
+## 2026-08-09 pre-resubmission quality review
+
+Full local review pass (code/build/test only — nothing touched in ASC, per the resubmission
+block). Summary written to `~/Projects/app-store-rejections/reviews/TienLen.md`; full detail
+there, short version here:
+
+- **Build**: clean `xcodegen generate` + `xcodebuild build` for iPhone 17 Simulator —
+  BUILD SUCCEEDED, no errors, no real warnings.
+- **Game logic**: hand-traced the full ruleset (combos, bomb-tier hierarchy, chặt heo,
+  cóng/thối heo scoring, both tới trắng detectors) against `Combo.swift`/`AIPlayer.swift`/
+  `GameModel.swift` — correct and complete, not a stub. No changes needed here.
+- **Real bug found and fixed**: the Pro paywall advertised "Exclusive card back designs,"
+  but that feature didn't exist anywhere in the code — `CardView` only ever rendered one
+  hardcoded back regardless of purchase state. Also, `HomeView`'s only button that opened
+  the paywall sheet was hidden entirely once a user went Pro, so a legitimate purchaser had
+  no way back to it. Fixed both: added `Core/CardBackStyle.swift` (Classic Red free, Royal
+  Blue + Jade Bamboo Pro-exclusive), wired it into `CardView`/`GameView`, added a picker to
+  `UpgradeView`, and changed the Home button to stay visible (relabeled "Card Backs & Pro
+  Settings" once owned). Verified live in Simulator: paywall picker renders, selecting Royal
+  Blue actually changes opponents' card backs in-game.
+- **Localization/onboarding/DEBUG-isPro-gating**: all checked, all fine as previously
+  documented — bilingual UI is real (not listing-only), onboarding is real and forced on
+  first launch, no double-gating bug pattern present.
+- **Version bump**: `MARKETING_VERSION` 1.0.0 → 1.0.1, `CURRENT_PROJECT_VERSION` 2 → 3.
+  Confirmed landed correctly in the built `.app`'s `Info.plist` via `PlistBuddy`.
+- **Open/optional**: `screenshots/final/{en,vi}/` predate the card-back picker UI change —
+  optional reshoot via `capture_shots.py` before the next ASC push, not a blocker. Not run
+  this session to avoid touching ASC-adjacent assets or racing sibling apps' capture
+  scripts on shared simulators.
 
 ## Deploy / resubmit pattern
 

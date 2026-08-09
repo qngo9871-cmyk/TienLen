@@ -5,6 +5,7 @@
 "home.rules" = "Full Rules";
 "home.howtoplay" = "How to Play";
 "home.upgrade" = "Unlock Hard AI & more →";
+"home.manage" = "Card Backs & Pro Settings";
 "home.player.you" = "You";
 "home.player.left" = "Left";
 "home.player.across" = "Across";
@@ -44,6 +45,11 @@
 "upgrade.buyFallback" = "Unlock Tiến Lên Pro";
 "upgrade.restore" = "Restore Purchases";
 "upgrade.close" = "Not Now";
+"upgrade.cardBack.title" = "Card Back Style";
+
+"cardback.classic" = "Classic Red";
+"cardback.royal" = "Royal Blue";
+"cardback.jade" = "Jade Bamboo";
 
 "rules.title" = "Full Rules";
 "rules.done" = "Done";

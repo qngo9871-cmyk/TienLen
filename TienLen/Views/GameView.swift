@@ -2,12 +2,20 @@ import SwiftUI
 
 struct GameView: View {
     @ObservedObject var game: GameModel
+    @StateObject private var purchases = PurchaseManager.shared
+    @AppStorage("cardBackStyle") private var cardBackStyleRaw: String = CardBackStyle.classic.rawValue
     @State private var selected: Set<UUID> = []
     @Environment(\.dismiss) private var dismiss
 
     private var human: Player { game.players[0] }
     private var selectedCards: [Card] { human.hand.filter { selected.contains($0.id) } }
     private var isMyTurn: Bool { game.currentTurnIndex == 0 && !game.roundOver && !game.matchOver }
+    /// Falls back to the free "classic" back if the stored style is a Pro one the user
+    /// somehow doesn't own (defensive — one-time IAP shouldn't lapse, but never trust it blindly).
+    private var effectiveBackStyle: CardBackStyle {
+        let stored = CardBackStyle(rawValue: cardBackStyleRaw) ?? .classic
+        return (stored.isProOnly && !purchases.isPro) ? .classic : stored
+    }
 
     var body: some View {
         ZStack {
@@ -61,7 +69,7 @@ struct GameView: View {
             }
             HStack(spacing: -18) {
                 ForEach(game.players[index].hand.prefix(13)) { card in
-                    CardView(card: card, faceDown: true, width: 26)
+                    CardView(card: card, faceDown: true, width: 26, backStyle: effectiveBackStyle)
                 }
             }
         }

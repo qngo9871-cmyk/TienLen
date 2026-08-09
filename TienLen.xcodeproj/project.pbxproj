@@ -14,6 +14,7 @@
 		65F0E1A1C708B313A05BF837 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3032750F03C037EF241113F /* Card.swift */; };
 		6B4C479AE3C5C8031667DEB5 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E692DC3DE1068E9130A692EB /* Localization.swift */; };
 		773759F5D2F9C10B74D6400A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EE62763174C91F034741E /* CardView.swift */; };
+		7B9E288E1D09D94865FFA1DC /* CardBackStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CA456AED1609A53063FD3C /* CardBackStyle.swift */; };
 		8191E1EE17E6A1ACBBE3CE9C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69F88911DB8A4CF55AAD24F /* GameView.swift */; };
 		866B26AD32CF00463DC82B8D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61F74A180E1FD68D0B34927 /* GameModel.swift */; };
 		8D1E659F873084A66C67535D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E8E91520697A567297957E /* OnboardingView.swift */; };
@@ -41,6 +42,7 @@
 		9857D445DDD8DA34383FEFBA /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		9DBA96736F64B7A227FE8F9E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A41220A223DAE441B7D56519 /* GameModel+Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameModel+Capture.swift"; sourceTree = "<group>"; };
+		A5CA456AED1609A53063FD3C /* CardBackStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackStyle.swift; sourceTree = "<group>"; };
 		B369003EA19E9E2FBCBE7346 /* InstantWin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantWin.swift; sourceTree = "<group>"; };
 		B69F88911DB8A4CF55AAD24F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		B6E8E91520697A567297957E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				C8C944D242D88FDF44A29DE7 /* AIPlayer.swift */,
 				C3032750F03C037EF241113F /* Card.swift */,
+				A5CA456AED1609A53063FD3C /* CardBackStyle.swift */,
 				8A5C961A46132D75635F288B /* Combo.swift */,
 				C61F74A180E1FD68D0B34927 /* GameModel.swift */,
 				A41220A223DAE441B7D56519 /* GameModel+Capture.swift */,
@@ -186,6 +189,7 @@
 			files = (
 				2E4022DA8CFC1E88C109085C /* AIPlayer.swift in Sources */,
 				65F0E1A1C708B313A05BF837 /* Card.swift in Sources */,
+				7B9E288E1D09D94865FFA1DC /* CardBackStyle.swift in Sources */,
 				773759F5D2F9C10B74D6400A /* CardView.swift in Sources */,
 				37E978EB10747DB36CA22B01 /* Combo.swift in Sources */,
 				BE604E60383350828283849B /* ContentView.swift in Sources */,
@@ -254,7 +258,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = SM99L22Q84;
 				ENABLE_PREVIEWS = YES;
@@ -276,7 +280,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -324,7 +328,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = SM99L22Q84;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -340,7 +344,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,7 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tiến Lên";
@@ -368,7 +372,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quyenngo.tienlen;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -380,7 +384,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tiến Lên";
@@ -391,7 +395,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quyenngo.tienlen;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

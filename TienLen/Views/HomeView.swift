@@ -61,10 +61,10 @@ struct HomeView: View {
                             }
                         }
 
-                        if !purchases.isPro {
-                            Button { showUpgrade = true } label: {
-                                Text(L("home.upgrade")).font(.footnote).foregroundStyle(.yellow)
-                            }
+                        Button { showUpgrade = true } label: {
+                            Text(purchases.isPro ? L("home.manage") : L("home.upgrade"))
+                                .font(.footnote)
+                                .foregroundStyle(purchases.isPro ? .white.opacity(0.7) : .yellow)
                         }
                     }
 

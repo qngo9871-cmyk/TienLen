@@ -2,6 +2,7 @@ import SwiftUI
 
 struct UpgradeView: View {
     @StateObject private var purchases = PurchaseManager.shared
+    @AppStorage("cardBackStyle") private var cardBackStyleRaw: String = CardBackStyle.classic.rawValue
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -24,6 +25,7 @@ struct UpgradeView: View {
 
                     if purchases.isPro {
                         Text(L("upgrade.owned")).foregroundStyle(.green).font(.headline)
+                        cardBackPicker
                     } else {
                         Button {
                             Task { await purchases.purchase() }
@@ -62,6 +64,31 @@ struct UpgradeView: View {
             Image(systemName: icon).foregroundStyle(.purple).frame(width: 24)
             Text(text).foregroundStyle(.white)
         }
+    }
+
+    private var cardBackPicker: some View {
+        VStack(spacing: 10) {
+            Text(L("upgrade.cardBack.title")).font(.subheadline.bold()).foregroundStyle(.white.opacity(0.85))
+            HStack(spacing: 16) {
+                ForEach(CardBackStyle.allCases) { style in
+                    Button { cardBackStyleRaw = style.rawValue } label: {
+                        VStack(spacing: 6) {
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(LinearGradient(colors: style.gradientColors,
+                                                      startPoint: .topLeading, endPoint: .bottomTrailing))
+                                .frame(width: 46, height: 67)
+                                .overlay(Image(systemName: style.icon).foregroundStyle(.white.opacity(0.4)))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(cardBackStyleRaw == style.rawValue ? Color.yellow : Color.clear, lineWidth: 3)
+                                )
+                            Text(L(style.titleKey)).font(.caption2).foregroundStyle(.white.opacity(0.7))
+                        }
+                    }
+                }
+            }
+        }
+        .padding(.top, 4)
     }
 }
 

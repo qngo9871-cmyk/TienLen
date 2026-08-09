@@ -5,6 +5,7 @@
 "home.rules" = "Luật Đầy Đủ";
 "home.howtoplay" = "Hướng Dẫn";
 "home.upgrade" = "Mở khóa AI Khó & hơn thế nữa →";
+"home.manage" = "Mặt Sau Lá Bài & Cài Đặt Pro";
 "home.player.you" = "Bạn";
 "home.player.left" = "Trái";
 "home.player.across" = "Đối Diện";
@@ -44,6 +45,11 @@
 "upgrade.buyFallback" = "Mở Khóa Tiến Lên Pro";
 "upgrade.restore" = "Khôi Phục Giao Dịch";
 "upgrade.close" = "Để Sau";
+"upgrade.cardBack.title" = "Kiểu Mặt Sau Lá Bài";
+
+"cardback.classic" = "Đỏ Cổ Điển";
+"cardback.royal" = "Xanh Hoàng Gia";
+"cardback.jade" = "Ngọc Trúc";
 
 "rules.title" = "Luật Đầy Đủ";
 "rules.done" = "Xong";
