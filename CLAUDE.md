@@ -8,15 +8,88 @@ background, but **do not assume its ruleset applies here**. The two games share 
 structure (4 players, combo-beating shedding, tới trắng instant wins, StoreKit Pro unlock,
 true bilingual UI) but the actual game logic genuinely differs in several places — see below.
 
-**Status: 🟡 READY FOR RESUBMISSION AFTER 2026-08-18 (pending Apple's Guideline 5.6 hold).**
-The whole developer account (19 apps, this one included) got hit with a Guideline 5.6
-"Developer Code of Conduct — Review Suspended" account-level flag, almost certainly
-triggered by submitting ~19 similar template-style apps within an 8-day window
-(2026-08-01–2026-08-08). Resubmission is hard-blocked until 2026-08-18 — do not attempt
-any App Store Connect action before then. Prior ASC state (now stale): app id `6796833065`,
-version `1.0.0` (id `3e15840d-4255-48f1-83fc-420fe8cf4ddf`), build
-`d8799eca-0a28-4ca1-be15-ebcd724bf213` attached, reviewSubmission
-`f59cb5d1-f8a5-4b84-b086-99e25942affd`. Release type: automatic (`AFTER_APPROVAL`).
+**Status: 🟡 READY FOR RESUBMISSION — scheduled batch 4, 2026-08-28 (pending Apple's Guideline
+5.6 hold clearing 2026-08-18).** The whole developer account (19 apps, this one included) got
+hit with a Guideline 5.6 "Developer Code of Conduct — Review Suspended" account-level flag,
+almost certainly triggered by submitting ~19 similar template-style apps within an 8-day window
+(2026-08-01–2026-08-08). Resubmission is hard-blocked until 2026-08-18 — do not attempt any
+App Store Connect submit/review-submission action before then (metadata/screenshot pushes are
+fine, per `~/Projects/app-store-rejections/NOTES.md`). ASC state as of this session's metadata
+push (2026-08-12): app id `6796833065`, version `1.0.2` (id
+`3e15840d-4255-48f1-83fc-420fe8cf4ddf`, state `REJECTED`, still editable). No build attached yet
+for 1.0.2 — that step (archive/export/upload via the pipeline below) still needs to happen before
+the batch-4 submission on 2026-08-28. Release type: automatic (`AFTER_APPROVAL`).
+
+## Polish pass (2026-08-12)
+
+Second, deeper pre-resubmission pass (first pass was 2026-08-09, see below). Scope: re-verify
+the 08-09 fixes are still solid, fix real UI/polish issues, refresh ASO copy. Nothing submitted
+to review — metadata/screenshot pushes only, per the resubmission-block rule.
+
+- **Card-back Pro feature re-verified live, with screenshot evidence — genuinely works.** This
+  was the highest-stakes check for this app (the 08-09 pass built a feature that had previously
+  been sold-but-never-built). Read the source end-to-end
+  (`CardBackStyle.swift`/`CardView.swift`/`GameView.swift`/`UpgradeView.swift`): `GameView`'s
+  `effectiveBackStyle` correctly falls back to Classic if a Pro style is selected without
+  `purchases.isPro`, and `UpgradeView` only renders the picker at all once `purchases.isPro` is
+  true — free users have no UI path to a Pro-only back. Then verified live in the simulator, not
+  just by reading code: launched with `TL_CAPTURE=upgrade`, confirmed the 3-swatch picker
+  (Classic Red / Royal Blue / Jade Bamboo) renders and is selectable; set
+  `defaults write com.quyenngo.tienlen cardBackStyle royal` and relaunched with
+  `TL_CAPTURE=midgame` — opponents' face-down hands actually rendered the Royal Blue design
+  (star icon, blue gradient) instead of the default red/club back. Confirmed genuinely wired,
+  not cosmetic-only.
+- **Bug found and fixed: `screenshots/final/{en,vi}/04-upgrade.png` were stale**, predating the
+  card-back picker (the 08-09 pass flagged this as an open, non-blocking item and never
+  recaptured). Recaptured all 10 shots via `capture_shots.py`
+  (`TL_DEVICE_UDID=<TienLen-Shots UDID>`); the new `04-upgrade.png` for both locales now shows
+  the picker, a genuine differentiator worth showing off. All 10 re-inspected visually — correct
+  diacritics, no clipping, no dead-space-below-bottom-control layout bug (checked for the
+  recurring class of bug found in other apps this session; not present here).
+- **Bug found and fixed: ASC en-US subtitle was in Vietnamese.** `LOCALES["en-US"]["subtitle"]`
+  in `asc_push_tienlen.py` was a copy-paste of the `vi` subtitle ("Chơi Tiến Lên Cùng AI"),
+  wasting a heavily search-weighted field on the English storefront. Changed to
+  "Real Rules, Offline vs AI" (25 chars).
+- **ASO refresh**: description/promo copy was already strong (accurate, specific ruleset detail,
+  not generic template filler) so left mostly as-is, but neither locale's description or promo
+  mentioned the card-back Pro feature even though it's now real — added a bullet to both
+  locales' description ("PLAY YOUR WAY" / "CHƠI THEO CÁCH CỦA BẠN") and a clause to both promo
+  texts. en-US keywords: dropped "vietnamese card game" and "card game" (redundant with the
+  indexed app name "Tiến Lên - Vietnamese Cards"), added "chặt heo,tới trắng" (present in the vi
+  keyword list already, high-value diaspora search terms, previously missing from en-US).
+- **Two push-script bugs found and fixed in `~/asc-tools/asc_push_tienlen.py`** (committed
+  separately in the asc-tools repo):
+  1. `find_or_create_version` hardcoded `versionString: "1.0.0"` unconditionally — every push
+     would silently force the ASC version back down to 1.0.0 regardless of the app's actual
+     local version (already 1.0.1 going into this session, now 1.0.2), which would have desynced
+     ASC from the built binary's `CFBundleShortVersionString` at submit time. Replaced with a
+     `VERSION_STRING` module constant kept in sync with `project.yml`.
+  2. `set_iap_localization` had no error handling, unlike its sibling `create_or_update_iap`
+     (which already degrades gracefully) — a locked `IAP_VERSION_UNMODIFIABLE` state (pre-existing
+     server-side, not caused by this session) crashed the whole script with an unhandled
+     `RuntimeError` before pricing ever ran. Wrapped in the same graceful-degradation pattern.
+  3. Also found (informational, not fixed — `find_app_info` only had one candidate `appInfo` to
+     choose from this time, so the "picks a locked one instead of REJECTED" failure mode from
+     Klotski's script didn't actually manifest here): verified via direct API query that this
+     app has exactly one `appInfo`, state `REJECTED`, so no ambiguity risk currently exists.
+- **Version bump**: `MARKETING_VERSION` 1.0.1 → **1.0.2**, `CURRENT_PROJECT_VERSION` 3 → **4**.
+  Note `project.yml` has both a project-level `settings.base` block and a target-level
+  `targets.TienLen.settings.base` block with their own copies of these two keys — XcodeGen's
+  target-level settings win, so **both** must be edited or the bump silently no-ops on the built
+  binary (the project-level block was already stale/inert from a previous pass). Confirmed via
+  `PlistBuddy` against the freshly built `.app`'s `Info.plist`: `CFBundleShortVersionString` =
+  1.0.2, `CFBundleVersion` = 4.
+- **Rebuilt clean after all changes**: `xcodegen generate` + `xcodebuild clean build` for
+  `platform=iOS Simulator,name=iPhone 17` — BUILD SUCCEEDED, zero warnings.
+- **Pushed to ASC**: app-level metadata (name/subtitle/privacy URL), categories, version
+  1.0.2 + both locales' description/keywords/promo/support URL, all 10 screenshots (order
+  verified), app base price (Free), IAP price ($2.99) — all confirmed via a follow-up
+  `asc_inspect_listing.py` read-back. IAP name/description localization patch was skipped
+  (pre-existing locked state, not something this session broke — the live IAP copy was already
+  accurate, mentioning card backs, from the 08-09 pass).
+- **No build uploaded this session** — out of scope for this pass (would require the
+  archive/export/upload pipeline below, which wasn't run since no submission is happening before
+  2026-08-18 anyway). Needs to happen before the 2026-08-28 batch-4 submission.
 
 ## 2026-08-09 pre-resubmission quality review
 
