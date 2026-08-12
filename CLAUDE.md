@@ -91,6 +91,23 @@ to review — metadata/screenshot pushes only, per the resubmission-block rule.
   archive/export/upload pipeline below, which wasn't run since no submission is happening before
   2026-08-18 anyway). Needs to happen before the 2026-08-28 batch-4 submission.
 
+## Build staged for resubmission (2026-08-13)
+
+Archived, exported, and uploaded a Release build ahead of the staggered resubmission — still
+blocked until 2026-08-18 by the Guideline 5.6 account-level hold, this app resubmits
+**2026-08-28** (batch 4). Build **1.0.2 (4)** uploaded via
+`xcrun altool --upload-app` (Delivery UUID `feb55a46-33b3-4362-9b4a-beb63a705b68`), processed to `VALID` by Apple, and
+attached to the existing `REJECTED` appStoreVersion (id `3e15840d-4255-48f1-83fc-420fe8cf4ddf`) via a direct
+`PATCH appStoreVersions/{id}/relationships/build` API call — independently re-verified via a
+follow-up `GET` on the same relationship, not just trusted from the PATCH's 204 response.
+
+**Deliberately NOT done yet** — waiting for the user's explicit go-ahead on this app's
+scheduled date, per the staggered resubmission plan:
+1. Tick the Pro IAP into this version in the App Store Connect **web UI** — the API has no
+   way to do this; it must be done from the version's own page (not the IAP's own page, which
+   creates an orphaned draft submission — a mistake this portfolio hit once before).
+2. Submit for review.
+
 ## 2026-08-09 pre-resubmission quality review
 
 Full local review pass (code/build/test only — nothing touched in ASC, per the resubmission
