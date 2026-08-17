@@ -19,6 +19,9 @@ push (2026-08-12): app id `6796833065`, version `1.0.2` (id
 `3e15840d-4255-48f1-83fc-420fe8cf4ddf`, state `REJECTED`, still editable). No build attached yet
 for 1.0.2 — that step (archive/export/upload via the pipeline below) still needs to happen before
 the batch-4 submission on 2026-08-28. Release type: automatic (`AFTER_APPROVAL`).
+Build **1.0.3 (5)** archived/exported/uploaded and processed to `VALID` 2026-08-18, carrying the
+7-day-trial-then-paywall change below — **NOT YET submitted for review**, held for the user's
+go-ahead.
 
 ## 2026-08-18 — 7-day trial, then everything locks (no permanent free tier)
 
@@ -56,6 +59,19 @@ resubmission plan (scheduled 2026-08-28, still blocked on the Guideline 5.6 acco
 keep the staggered per-app rollout (avoiding Apple flagging a burst of near-identical submission
 changes across this portfolio in a short window, the same caution as the original 5.6 incident).
 No version bump, no `xcodegen generate`, no archive/export/submit performed this session.
+
+## Build staged for resubmission (2026-08-18)
+
+Archived, exported, and uploaded a fresh Release build carrying the 7-day-trial-then-paywall
+change above. Bumped to **version 1.0.3, build 5** (`project.yml`, both project- and
+target-level blocks, regenerated via `xcodegen generate`) — chosen higher than both the
+local 1.0.2/4 and the existing ASC `appStoreVersion` 1.0.2 (id
+`3e15840d-4255-48f1-83fc-420fe8cf4ddf`, state `PREPARE_FOR_SUBMISSION`, existing build "4")
+to avoid any version-number collision. Archive/export/upload all succeeded (`xcrun altool`,
+Delivery UUID `c7ae107e-8505-4608-bb22-978d857e1820`); polled the ASC API and confirmed the
+build reached `processingState: VALID`. **Deliberately NOT done**: no new `appStoreVersion`
+created, no build attached to any version, no `reviewSubmission` touched — submission
+remains the user's explicit call, on the 2026-08-28 batch-4 schedule.
 
 ## Polish pass (2026-08-12)
 
