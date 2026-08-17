@@ -5,6 +5,8 @@
 "home.rules" = "Full Rules";
 "home.howtoplay" = "How to Play";
 "home.upgrade" = "Unlock Hard AI & more →";
+"home.upgrade.trialended" = "Trial ended — unlock to keep playing →";
+"home.trialdays" = "Free trial — %d day(s) left";
 "home.manage" = "Card Backs & Pro Settings";
 "home.player.you" = "You";
 "home.player.left" = "Left";
@@ -37,6 +39,7 @@
 
 "upgrade.title" = "Tiến Lên Pro";
 "upgrade.subtitle" = "Unlock the full experience.";
+"upgrade.subtitle.trialended" = "Your 7-day free trial has ended. Unlock Tiến Lên Pro to keep playing.";
 "upgrade.feature.hardAI" = "Hard AI — real card-counting opponents";
 "upgrade.feature.cardBacks" = "Exclusive card back designs";
 "upgrade.feature.unlimited" = "Unlimited matches, no ads, ever";

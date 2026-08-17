@@ -20,6 +20,43 @@ push (2026-08-12): app id `6796833065`, version `1.0.2` (id
 for 1.0.2 — that step (archive/export/upload via the pipeline below) still needs to happen before
 the batch-4 submission on 2026-08-28. Release type: automatic (`AFTER_APPROVAL`).
 
+## 2026-08-18 — 7-day trial, then everything locks (no permanent free tier)
+
+Portfolio-wide rollout, applied here preemptively before this app even goes live: two live
+sibling apps (ChineseChess v1.0.6, and SamLoc as of this same date) had real App Store
+downloads convert to **zero** IAP purchases, because their permanently-free tier (Easy/Normal AI,
+full rules, no ads) was the complete game for casual players — only Hard AI + card backs were
+ever gated. TienLen was still pre-launch (REJECTED/resubmission-pending, no download data of its
+own yet) but has the identical free-Easy/Normal-forever structure, so the same fix is applied now
+rather than waiting to observe the same zero-conversion pattern after it ships.
+
+**Before**: `HomeView.body`'s inline lock check only gated `.hard` (`d == .hard && !purchases.isPro`)
+— Easy and Normal AI were free forever, no trial clock existed at all.
+**After**: `PurchaseManager.swift` gained `trialActive`/`trialDaysRemaining`, backed by a
+`firstLaunchDate` UserDefaults key (7-day `trialDuration`), mechanism copied verbatim from
+SamLoc's 2026-08-18 change. `HomeView` now has an `isLocked(_:)` helper gating **all three**
+difficulties (Easy/Normal/Hard) once the trial expires and the user isn't Pro — Hard stays
+Pro-only always, Easy/Normal unlock only during the active trial or with Pro. Existing installs
+(there are none live yet, but the mechanism still handles it) with no stored `firstLaunchDate`
+get the clock started by this update rather than being locked out immediately. `UpgradeView`'s
+subtitle and the Home footnote button switch to "trial ended" copy once expired. Added 3 new
+localization keys (`home.trialdays`, `home.upgrade.trialended`, `upgrade.subtitle.trialended`) to
+both `en.lproj` and `vi.lproj`.
+
+Also fixed a latent bug found while in `PurchaseManager.swift`: `updateEntitlementStatus()`'s
+`#if DEBUG isPro = true` was a bare override with no capture-mode exemption — double-gated it
+(matching the SamLoc/ChineseChess reference pattern, using this app's actual `TL_CAPTURE`/
+`TL_SKIP_ONBOARDING` env vars from `ContentView.swift`) so `TL_CAPTURE=upgrade` screenshots show
+the real locked/buy-button state instead of "already purchased."
+
+Verified via `xcodebuild -destination 'generic/platform=iOS' -configuration Debug build` —
+BUILD SUCCEEDED. **Not yet archived/submitted.** This sits on top of the existing batch-4
+resubmission plan (scheduled 2026-08-28, still blocked on the Guideline 5.6 account hold above)
+— held for the user's explicit go-ahead, both because it's a real product/paywall change and to
+keep the staggered per-app rollout (avoiding Apple flagging a burst of near-identical submission
+changes across this portfolio in a short window, the same caution as the original 5.6 incident).
+No version bump, no `xcodegen generate`, no archive/export/submit performed this session.
+
 ## Polish pass (2026-08-12)
 
 Second, deeper pre-resubmission pass (first pass was 2026-08-09, see below). Scope: re-verify
